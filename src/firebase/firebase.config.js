@@ -13,12 +13,6 @@ const firebaseConfig = {
   storageBucket: import.meta.env.VITE_STORAGEBUCKET,
   messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
   appId: import.meta.env.VITE_APPID
-  // apiKey: "AIzaSyDLRQPxXDsr6sfUfrHC66wmhFvmWlrdlwE",
-  // authDomain: "mega-realtor.firebaseapp.com",
-  // projectId: "mega-realtor",
-  // storageBucket: "mega-realtor.appspot.com",
-  // messagingSenderId: "274996146321",
-  // appId: "1:274996146321:web:efbb391ca1f1d6d1b70f30"
 
 };
 

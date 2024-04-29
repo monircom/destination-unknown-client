@@ -1,0 +1,13 @@
+
+.slide{
+    color: rgb(212, 205, 241);
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+   }

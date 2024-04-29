@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import avater from "../assets/avatar.png";
+import ThemeControllerBtn from "./ThemeControllerBtn";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -81,7 +82,7 @@ const Navbar = () => {
         </div>
         <Link to="/">
           <button className="btn btn-ghost text-xl font-bold">
-            MEGA REALTOR
+          DESTINATION UNKNOWN
           </button>
         </Link>
       </div>
@@ -90,6 +91,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end gap-2">
+        <ThemeControllerBtn></ThemeControllerBtn>
         {user ? (
           <>
             <div className="dropdown dropdown-hover dropdown-bottom dropdown-end ">

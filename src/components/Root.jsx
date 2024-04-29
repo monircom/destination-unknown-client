@@ -14,7 +14,7 @@ const Root = () => {
 
         if(loc.pathname === '/')
         {
-            document.title = "MEGA REALTOR";
+            document.title = "DESTINATION UNKNOWN";
         }
         else{
         document.title = `${loc.pathname.replace("/", "").toUpperCase()}`;
