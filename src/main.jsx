@@ -16,6 +16,7 @@ import About from "./components/About";
  import ErrorPage from "./components/ErrorPage";
 import ResidentialDetails from "./components/ResidentialDetails";
 import Listings from "./components/Listings";
+import AddTouristsSpot from './components/AddTouristsSpot';
 
 
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/update",
         element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>,
+      },
+      {
+        path: "/tourists-spot",
+        element: <PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>,
       },
       {
         path: "/about",
