@@ -1,20 +1,30 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// // Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
+//console.log(import.meta.env.VITE_APIKEY);
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
+  // apiKey: "AIzaSyDLRQPxXDsr6sfUfrHC66wmhFvmWlrdlwE",
+  // authDomain: "mega-realtor.firebaseapp.com",
+  // projectId: "mega-realtor",
+  // storageBucket: "mega-realtor.appspot.com",
+  // messagingSenderId: "274996146321",
+  // appId: "1:274996146321:web:efbb391ca1f1d6d1b70f30"
 
-// // Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDwYqinT9e4NBsfoFPIit3TK4SQsBohNUg",
-//   authDomain: "destination-unknown-ed9f8.firebaseapp.com",
-//   projectId: "destination-unknown-ed9f8",
-//   storageBucket: "destination-unknown-ed9f8.appspot.com",
-//   messagingSenderId: "790989533003",
-//   appId: "1:790989533003:web:ccf0e36ada75e5a73f02ce"
-// };
+};
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-// export default app;
+const auth = getAuth(app);
+
+export default auth;
