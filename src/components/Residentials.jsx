@@ -5,12 +5,12 @@ import { Fade } from "react-awesome-reveal";
 const Residentials = () => {
   const [residentials, setResidentials] = useState([]);
 
-  useEffect(() => {
-    fetch("/residential.json")
-      .then((res) => res.json())
-      .then((data) => setResidentials(data));
-  }, []);
-  console.log(residentials);
+  // useEffect(() => {
+  //   fetch("/residential.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setResidentials(data));
+  // }, []);
+  // console.log(residentials);
   return (
     <div>
       <div className="w-full h-[100px] bg-[rgba(19,19,19,0.05)] rounded-xl flex justify-center items-center p-5 mt-10">
@@ -19,11 +19,11 @@ const Residentials = () => {
         </Fade>
         
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-7">
+      {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-7">
         {residentials.map((residential, idx) => (
           <Residential key={idx} residential={residential}></Residential>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,28 +1,36 @@
 import { useEffect, useState } from "react";
 
 const ThemeControllerBtn = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState('light');
+
+//   useEffect(() => {
+//     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+//       setTheme("dark");
+//       console.log("dark");
+//     } else {
+//       setTheme("light");
+//       console.log("dark");
+//     }
+//   }, []);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      console.log("dark");
-    } else {
-      setTheme("light");
-      console.log("dark");
-    }
-  }, []);
+    
+    const localTheme = localStorage.getItem('theme');
+    
+    localStorage.setItem('theme',theme);
+    //const localTheme = localStorage.getItem('theme');
+    document.documentElement.setAttribute("data-theme", localTheme);
+    console.log(localTheme);
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-      //document.documentElement.classList.remove("light");
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.setAttribute("data-theme", "light");
-      //document.documentElement.classList.add("light");
-    }
+    // if (theme === "dark") {
+    //   document.documentElement.classList.add("dark");
+    //   //document.documentElement.classList.remove("light");
+    //   document.documentElement.setAttribute("data-theme", "dark");
+    // } else {
+    //   document.documentElement.classList.remove("dark");
+    //   document.documentElement.setAttribute("data-theme", "light");
+    //   //document.documentElement.classList.add("light");
+    // }
   }, [theme]);
 
   const handleTheme = () => {
