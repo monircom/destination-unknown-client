@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import avater from "../assets/avatar.png";
 //import ThemeControllerBtn from "./ThemeControllerBtn";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
   const { user, logOut } = useContext(AuthContext);
   const [theme, setTheme] = useState(null);
 
@@ -131,7 +133,7 @@ const Navbar = () => {
         </div>
         <Link to="/">
           <button className="btn btn-ghost text-xl font-bold">
-          DESTINATION UNKNOWN
+          Destination Unknown
           </button>
         </Link>
       </div>

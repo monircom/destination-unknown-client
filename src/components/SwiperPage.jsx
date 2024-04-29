@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 
 import { Fade } from "react-awesome-reveal";
 // Import Swiper React components

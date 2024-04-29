@@ -3,7 +3,7 @@ const Footer = () => {
       
       <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-5">
       <nav className="grid grid-flow-col gap-4">
-        <p className="text-5xl font-extrabold font-playfair-display">MEGA REALTOR</p>
+        <p className="text-5xl font-extrabold font-playfair-display">Destination Unknown</p>
       </nav> 
       <nav>
         <div className="grid grid-flow-col gap-4">
@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
       </nav> 
       <aside>
-        <p>Copyright © 2024 - All right reserved by MEGA REALTOR</p>
+        <p>Copyright © 2024 - All right reserved by Destination Unknown</p>
       </aside>
     </footer>
     );

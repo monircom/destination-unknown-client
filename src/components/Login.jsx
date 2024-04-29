@@ -30,7 +30,7 @@ const Login = () => {
             duration: 2000,
             position: "top-center",
           });
-          //console.log(result.user);          
+          console.log(result.user);          
           setTimeout(function () {
             navigate(location?.state ? location.state : "/");
           }, 2500);
@@ -49,7 +49,7 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleLogin()
       .then((result) => {
-       //console.log(result.user); 
+       console.log(result.user); 
         toast.success("Logged in Successfully", {
           duration: 2000,
           position: "top-center",
@@ -71,7 +71,7 @@ const Login = () => {
   const handleGithubLogin = () => {
     githubLogin()
       .then((result) => {
-        //console.log(result.user);
+        console.log(result.user);
         toast.success("Logged in Successfully", {
           duration: 2000,
           position: "top-center",
