@@ -16,17 +16,7 @@ const Navbar = () => {
       document.documentElement.setAttribute("data-theme", localTheme);
       console.log("first",localTheme);
     }
-
-        // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        //   setTheme("dark");
-        //   console.log("dark");
-        // } else {
-        //   setTheme("light");
-        //   console.log("dark");
-        // }
-      }, []);
-
-  
+    }, []); 
   
 
   useEffect(() => {
@@ -41,17 +31,7 @@ const Navbar = () => {
     setTheme(localTheme)
     console.log(localTheme);
     }
-    
 
-    // if (theme === "dark") {
-    //   document.documentElement.classList.add("dark");
-    //   //document.documentElement.classList.remove("light");
-    //   document.documentElement.setAttribute("data-theme", "dark");
-    // } else {
-    //   document.documentElement.classList.remove("dark");
-    //   document.documentElement.setAttribute("data-theme", "light");
-    //   //document.documentElement.classList.add("light");
-    // }
   }, [theme]);
 
   const handleTheme = e => {
@@ -102,17 +82,24 @@ const Navbar = () => {
       {user && (
         <>
           <li>
-            <NavLink to="/update"> Update Profile</NavLink>
+            <NavLink to="/update">Add Tourists Spot</NavLink>
           </li>
+          <li>
+            <NavLink to="/update">My List</NavLink>
+          </li>
+          
+          {/* <li>
+            <NavLink to="/update"> Update Profile</NavLink>
+          </li> */}
           {/* <li>
             <NavLink to="/profile"> Profile</NavLink>
           </li> */}
         </>
       )}
 
-      <li>
+      {/* <li>
         <NavLink to="/about"> About</NavLink>
-      </li>
+      </li> */}
     </>
   );
   return (
@@ -191,7 +178,7 @@ const Navbar = () => {
         {user ? (
           <>
             <div className="dropdown dropdown-hover dropdown-bottom dropdown-end ">
-              <Link to="/profile">
+             {/*  <Link to="/profile">
                 <div className="tooltip tooltip-bottom z-[10]" data-tip={user?.displayName || "User Name Not Found"}>                  
                   <div                  
                   role="button"
@@ -202,8 +189,9 @@ const Navbar = () => {
                   </div>
                 </div>
                 </div>
-                </Link>
-                {/* <div
+                </Link> */}
+               <Link to="/profile">
+                <div
                   tabIndex={0}
                   role="button"
                   className="btn btn-ghost btn-circle avatar"
@@ -212,7 +200,7 @@ const Navbar = () => {
                     <img alt="User" src={user?.photoURL || avater} />
                   </div>
                 </div>
-              </Link>
+                </Link>
               
               <ul
                 tabIndex={0}
@@ -221,13 +209,15 @@ const Navbar = () => {
                 <li>
                   <span>{user?.displayName || "User Name Not Found"}</span>
                 </li>
-                <li>{<span>{user?.email || "Email  Not Found"}</span>}</li>
-              </ul>
-             */}
-            </div> 
-            <button onClick={handleLogOut} className="btn btn-sm">
+                <li><button onClick={handleLogOut} className="btn btn-sm">
               Log Out
-            </button>
+            </button></li>
+              </ul>
+            
+            </div> 
+            {/* <button onClick={handleLogOut} className="btn btn-sm">
+              Log Out
+            </button> */}
           </>
         ) : (
           <Link to="/login">
