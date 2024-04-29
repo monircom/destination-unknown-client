@@ -1,7 +1,7 @@
 import {Outlet, useLocation} from 'react-router-dom';
 import Navbar from './Navbar';
 import { useEffect } from 'react';
-//import Footer from './Footer';
+import Footer from './Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
@@ -30,11 +30,10 @@ const Root = () => {
         console.log(loc);
     },[loc.pathname]);
     return (
-        <div>
-            <h1>ROOT</h1>
+        <div>            
             <Navbar></Navbar>
             <Outlet></Outlet>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 };

@@ -10,7 +10,7 @@ const GetInTouch = () => {
                     <div
                         className="flex flex-col justify-center text-center items-center border-dashed border-b-2 border-t-2 border-[#13131833]">
                         <h1 className="mt-8 text-2xl lg:text-4xl font-extrabold">Get In Touch</h1>
-                        <p className="my-8 text-[#13131899] font-medium max-w-[610px]">We encourage you to get in touch with
+                        <p className="my-8 font-medium max-w-[610px]">We encourage you to get in touch with
                             us!
                             Your questions, feedback, and inquiries are invaluable to us. Whether you're seeking
                             information, exploring opportunities, or have specific needs, our team is ready to assist
@@ -25,14 +25,14 @@ const GetInTouch = () => {
                             
                             <div className="bg-[#BCED6D1A] rounded-2xl mb-6">
                                 <img src="/images/Group 1171275317.png" alt="" className="pt-8 pl-8"/>
-                                <p className="text-[#13131899] mt-6 ml-8">Phone Number : </p>
+                                <p className="mt-6 ml-8">Phone Number : </p>
                                 <p className="text-black-color text-[18px] font-extrabold mt-3 ml-8 pb-12">(+62) 123-321-543
                                 </p>
                             </div>
                             
                             <div className="bg-[#FDDD5F1A] rounded-2xl mb-6">
                                 <img src="/images/Group 1171275318.png" alt="" className="pt-8 pl-8"/>
-                                <p className="text-[#13131899] mt-6 ml-8">Email : </p>
+                                <p className="mt-6 ml-8">Email : </p>
                                 <p className="text-black-color text-[18px] font-extrabold mt-3 ml-8 pb-12">
                                     megarealtor@support.com
                                 </p>
@@ -40,7 +40,7 @@ const GetInTouch = () => {
                            
                             <div className="bg-[#629CF31A] rounded-2xl mb-6">
                                 <img src="/images/Group 1171275321.png" alt="" className="pt-8 pl-8"/>
-                                <p className="text-[#13131899] mt-6 ml-8">Location : </p>
+                                <p className="mt-6 ml-8">Location : </p>
                                 <p className="text-black-color text-[18px] font-extrabold mt-3 ml-8 pb-12">152/1 Mohakhali
                                     Wireless Gate</p>
                             </div>
