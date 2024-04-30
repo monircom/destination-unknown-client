@@ -2,10 +2,27 @@
 import { useContext } from "react";
 import avater from "../assets/avatar.png";
 import { AuthContext } from "../Providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 const Profile = () => {
 
     const { user , logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    function handleLogOut() {
+      logOut()
+        .then(() => {
+          toast.error("User Logged out", {
+            duration: 2000,
+            position: "top-center",
+          });
+          setTimeout(function () {
+            navigate("/");
+          }, 2500);
+          console.log("user Logged out successfully");
+        })
+        .catch((error) => console.error(error));
+    }
   return (
 
     <div className="min-h-[75vh] bg-base-200 flex justify-center items-center flex-col">
@@ -26,10 +43,14 @@ const Profile = () => {
           <h2 className="card-title">{user?.displayName || "User Name Not Found"}</h2>
           <p>{user?.email || "Email  Not Found"}</p>
           <div className="card-actions">
-          <Link to="/update"><button className="btn btn-primary">Update Profile</button> </Link>
+          {/* <Link to="/update"><button className="btn btn-primary">Update Profile</button> </Link> */}
+          <Link to="/update"><button onClick={handleLogOut} className="btn btn-primary">
+              Log Out
+            </button> </Link>
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

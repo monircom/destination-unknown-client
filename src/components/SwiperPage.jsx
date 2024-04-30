@@ -34,14 +34,14 @@ const SwiperPage = () => {
         <SwiperSlide>
           <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/1.jpg)] "> 
           <Fade>  
-            <h1 className="text-5xl ">Beautiful home with modern amenities.</h1>
+            <h1 className="text-5xl px-8">Where the wilderness whispers and the tides tell tales: Welcome to Sundarbans.</h1>
             </Fade>     
           </div>
         </SwiperSlide>
         <SwiperSlide>
         <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/2.jpg)] ">     
         <Fade>    
-            <h1 className="text-5xl ">Cozy townhouse in a family-friendly neighborhood.</h1>
+            <h1 className="text-5xl px-8">Discover paradise in every shade: Phuket, where adventure meets serenity.</h1>
           </Fade>
           </div>
         </SwiperSlide>
@@ -49,14 +49,14 @@ const SwiperPage = () => {
         <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/3.jpg)] ">   
              
         <Fade>   
-            <h1 className="text-5xl ">Modern apartment with stunning city views.</h1>
+            <h1 className="text-5xl px-8">Penang: Where culture, cuisine, and charm intertwine.</h1>
             </Fade>
           </div>
         </SwiperSlide>
         <SwiperSlide>
         <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/4.jpg)] ">        
         <Fade>
-            <h1 className="text-5xl ">Comfortable student housing near campus.</h1>
+            <h1 className="text-5xl px-8">Ha Long Bay: Where dreams sail on a sea of tranquility.</h1>
             </Fade>
 
           </div>
@@ -64,14 +64,14 @@ const SwiperPage = () => {
         <SwiperSlide>
         <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/5.jpg)] ">  
         <Fade>
-            <h1 className="text-5xl ">Retirement community with various amenities.</h1>
+            <h1 className="text-5xl px-8">Bali: Unveil the magic of an island where every moment is a masterpiece.</h1>
             </Fade>  
           </div>
         </SwiperSlide>
         <SwiperSlide>
         <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/6.jpg)] ">      
         <Fade>
-            <h1 className="text-5xl ">Charming vacation rental by the beach.</h1>
+            <h1 className="text-5xl px-8">Phnom Penh: A tapestry of tradition and modernity woven along the Mekong.</h1>
             </Fade>  
           </div>
         </SwiperSlide>

@@ -1,8 +1,9 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import auth from "../firebase/firebase.config"
+//import { createUserWithEmailAndPassword } from "firebase/auth";
+//import auth from "../firebase/firebase.config"
 import SwiperPage from "./SwiperPage";
-import Residentials from "./Residentials";
+//import Residentials from "./Residentials";
 import GetInTouch from "./GetInTouch";
+import Countries from "./Countries";
 
 
 const Home = () => {    
@@ -12,7 +13,9 @@ const Home = () => {
 
         <SwiperPage></SwiperPage>
 
-        <Residentials></Residentials>
+        <Countries></Countries>
+
+        {/* <Residentials></Residentials> */}
 
         <GetInTouch></GetInTouch>
             
