@@ -18,6 +18,8 @@ import ResidentialDetails from "./components/ResidentialDetails";
 import Listings from "./components/Listings";
 import AddTouristsSpot from './components/AddTouristsSpot';
 import AllTouristSpots from './components/AllTouristSpots';
+import MyList from './components/MyList';
+import UpdateSpot from './components/UpdateSpot';
 
 
 
@@ -56,7 +58,12 @@ const router = createBrowserRouter([
         element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>,
       },
       {
-        path: "/tourists-spot",
+        path: "/update-spot/:id",
+        element: <PrivateRoute><UpdateSpot></UpdateSpot></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/my-list-id/${params.id}`)
+      },
+      {
+        path: "/add-tourists-spot",
         element: <PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>,
       },
       {
@@ -67,6 +74,10 @@ const router = createBrowserRouter([
         path: "/residential/:id",
         element: <PrivateRoute><ResidentialDetails></ResidentialDetails></PrivateRoute>,
         loader: () => fetch("/residential.json"),
+      },
+      {
+        path: "/my-list",
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>,
       },
     ],
   },

@@ -40,9 +40,9 @@ const AllTouristSpots = () => {
     return (        
         <div className="mt-10">
         <div className="w-full h-[100px] bg-[rgba(19,19,19,0.05)] rounded-xl flex justify-center items-center">
-          <h1 className="text-3xl font-bold">All Tourist Spots {spots.length}</h1>
+          <h1 className="text-3xl font-bold">All Tourist Spots</h1>
         </div>
-        <div className="flex justify-center mx-auto">
+        <div className="flex justify-center mx-auto mt-10">
         <div className="dropdown dropdown-bottom dropdown-end">
             <div tabIndex={0} role="button" className="btn w-full m-1 bg-[#23BE0A] text-white text-xl font-semibold px-12">Sort By</div>
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">                

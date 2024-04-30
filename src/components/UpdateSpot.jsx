@@ -1,14 +1,17 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 import Swal from 'sweetalert2'
-import { AuthContext } from '../Providers/AuthProvider';
-const AddTouristsSpot = () => {
+import { useLoaderData, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
+
+
+const UpdateSpot = () => {
+    const navigate = useNavigate();
     const { user } = useContext(AuthContext);
+    const spot = useLoaderData()[0];
 
-    //console.log(user);
+    console.log (spot)
 
-    //displayName
-
-    const handleAddSpot = event =>{
+    const handleUpdateSpot = event =>{
 
        
         event.preventDefault();
@@ -26,36 +29,53 @@ const AddTouristsSpot = () => {
         const email = user?.email;
         const userName = user?.displayName;
 
-        const newTouristSpot = {imageURL, spotName, country, location, description, averageCost, seasonality, travelTime, totalVisitorsPerYear,email,userName};
-        console.log(newTouristSpot);
+        const updatesTouristSpot = {imageURL, spotName, country, location, description, averageCost, seasonality, travelTime, totalVisitorsPerYear,email,userName};
+        console.log(updatesTouristSpot);
 
-        fetch('http://localhost:5000/tourist-spot',{
-            method: 'POST',
+        fetch(`http://localhost:5000/tourist-spot/${spot?._id}`,{
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newTouristSpot)
+            body: JSON.stringify(updatesTouristSpot)
         })
         .then(res => res.json())
         .then(data =>{
             console.log(data);
-            if(data.insertedId){
+            if(data.modifiedCount){
                 Swal.fire({
                     title: 'Success!',
-                    text: 'Tourist Spot Added Successfully',
-                    icon: 'success',
+                    text: 'Tourist Spot Updated Successfully',
+                    icon: 'success',                    
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  setTimeout(function () {
+                    navigate("/my-list");
+                  }, 2500);              
+            }
+            else{
+                Swal.fire({
+                    title: 'Oops...!',
+                    text: 'Data not changed',
+                    icon: 'info',
                     confirmButtonText: 'Ok'
                   })
             }
         })
 
     }
-  return (
-    <div> 
+
+
+
+    return (
+        <div>  
       <div className="w-full h-[100px] bg-[rgba(19,19,19,0.05)] rounded-xl flex justify-center items-center">
-        <h1 className="text-3xl font-bold">Add Tourist Spot</h1>        
-      </div>   
-      <form onSubmit={handleAddSpot}>
+        <h1 className="text-3xl font-bold">Update Tourist Spot</h1>        
+      </div>       
+      <form onSubmit={handleUpdateSpot}>
+      
+
         <div className="md:max-w-[80%] mx-auto">
           <div className="flex">
             <div className="form-control w-full mx-6">
@@ -66,6 +86,7 @@ const AddTouristsSpot = () => {
                 <input
                   type="text"
                   name="imageURL"
+                  defaultValue={spot?.imageURL}
                   placeholder="Image URL"
                   required
                   className="input input-bordered w-full"
@@ -85,6 +106,7 @@ const AddTouristsSpot = () => {
                 <input
                   type="text"
                   name="spotName"
+                  defaultValue={spot?.spotName}
                   required
                   placeholder="Tourists spot name"
                   className="input input-bordered w-full"
@@ -97,7 +119,7 @@ const AddTouristsSpot = () => {
                 <span className="label-text text-2xl">Country Name</span>
               </label>
               <label className="input-group">
-                <select name="country" className="select select-primary w-full md:max-w-sm">
+                <select name="country" defaultValue={spot?.country} className="select select-primary w-full md:max-w-sm">
                   <option disabled selected>
                     Select Country
                   </option>
@@ -123,6 +145,7 @@ const AddTouristsSpot = () => {
                 <input
                   type="text"
                   name="location"
+                  defaultValue={spot?.location}
                   placeholder="Location"
                   className="input input-bordered w-full"
                 />
@@ -137,6 +160,7 @@ const AddTouristsSpot = () => {
               <input
                   type="text"
                   name="description"
+                  defaultValue={spot?.description}
                   placeholder="short description"
                   className="input input-bordered w-full"
                 />
@@ -154,6 +178,7 @@ const AddTouristsSpot = () => {
                 <input
                   type="number"
                   name="averageCost"
+                  defaultValue={spot?.averageCost}
                   placeholder="500"
                   required
                   className="input input-bordered w-full"
@@ -169,6 +194,7 @@ const AddTouristsSpot = () => {
               <input
                   type="text"
                   name="seasonality"
+                  defaultValue={spot?.seasonality}
                   placeholder="summer, winter ..."
                   className="input input-bordered w-full"
                 />
@@ -186,6 +212,7 @@ const AddTouristsSpot = () => {
                 <input
                   type="text"
                   name="travelTime"
+                  defaultValue={spot?.travelTime}
                   placeholder="7 days"
                   className="input input-bordered w-full"
                 />
@@ -200,6 +227,7 @@ const AddTouristsSpot = () => {
               <input
                   type="text"
                   name="totalVisitorsPerYear"
+                  defaultValue={spot?.totalVisitorsPerYear}
                   placeholder="10000"
                   className="input input-bordered w-full"
                 />
@@ -217,7 +245,7 @@ const AddTouristsSpot = () => {
                 <input
                   type="text"
                   name="email"
-                  defaultValue={user?.email}  
+                  defaultValue={user?.email} 
                   readOnly           
                   className="input input-bordered w-full"
                 />
@@ -241,12 +269,12 @@ const AddTouristsSpot = () => {
           </div>
 
           <div className="mx-6 mt-5 mb-10">
-          <input type="submit" value="Add Tourist Spot" className="btn btn-block font-bold text-2xl" />
+          <input type="submit" value="Update Tourist Spot" className="btn btn-block font-bold text-2xl" />
           </div>
         </div>        
       </form>
     </div>
-  );
+    );
 };
 
-export default AddTouristsSpot;
+export default UpdateSpot;
