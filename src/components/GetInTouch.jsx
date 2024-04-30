@@ -8,7 +8,7 @@ const GetInTouch = () => {
             <div className="container lg:my-20 px-4 my-8 mx-auto">
                     <div
                         className="flex flex-col justify-center text-center items-center border-dashed border-b-2 border-t-2 border-[#13131833]">
-                        <h1 className="mt-8 text-2xl lg:text-4xl font-extrabold">Get In Touch</h1>
+                        <h1 className="mt-8 text-3xl lg:text-3xl font-bold">Get In Touch</h1>
                         <p className="my-8 font-medium max-w-[610px]">We encourage you to get in touch with
                             us!
                             Your questions, feedback, and inquiries are invaluable to us. Whether you are seeking
@@ -68,7 +68,7 @@ const GetInTouch = () => {
                             <div className="flex flex-col lg:col-span-2 space-y-4">
                                 <p className="text-black-color text-xl font-bold">Message</p>
                                 <textarea className="bg-[#13131808] p-4 rounded-xl outline-none resize-none"
-                                    placeholder="Write your message" rows="15"></textarea>
+                                    placeholder="Write your message" rows="10"></textarea>
                             </div>
                             <button
                                 className="lg:col-span-2 btn bg-red-400 text-white text-[1.125rem] lg:text-[1.25rem] font-bold border-orange-col">

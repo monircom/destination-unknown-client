@@ -1,4 +1,6 @@
-const Countries = () => {
+import React from "react";
+
+const TouristsSpots = () => {
   return (
     <div className="mt-10">
       <div className="w-full h-[100px] bg-[rgba(19,19,19,0.05)] rounded-xl flex justify-center items-center">
@@ -8,4 +10,4 @@ const Countries = () => {
   );
 };
 
-export default Countries;
+export default TouristsSpots;

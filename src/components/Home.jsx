@@ -5,6 +5,7 @@ import SwiperPage from "./SwiperPage";
 import GetInTouch from "./GetInTouch";
 import Countries from "./Countries";
 import About from "./About";
+import TouristsSpots from "./TouristsSpots";
 
 
 const Home = () => {    
@@ -15,6 +16,8 @@ const Home = () => {
         <SwiperPage></SwiperPage>
 
         <Countries></Countries>
+
+        <TouristsSpots></TouristsSpots>
 
         {/* <Residentials></Residentials> */}
 
