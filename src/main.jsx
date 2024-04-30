@@ -14,8 +14,6 @@ import PrivateRoute from "./routes/PrivateRoute";
 import UpdateProfile from "./components/UpdateProfile";
 import About from "./components/About";
  import ErrorPage from "./components/ErrorPage";
-import ResidentialDetails from "./components/ResidentialDetails";
-import Listings from "./components/Listings";
 import AddTouristsSpot from './components/AddTouristsSpot';
 import AllTouristSpots from './components/AllTouristSpots';
 import MyList from './components/MyList';
@@ -39,10 +37,7 @@ const router = createBrowserRouter([
         path: "/all-tourist-spot",
         element: <AllTouristSpots></AllTouristSpots> ,
       },
-      {
-        path: "/listings",
-        element: <Listings></Listings>,
-      },
+ 
       {
         path: "/login",
         element: <Login></Login>,
@@ -81,12 +76,7 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <PrivateRoute><About></About></PrivateRoute>,
-      },
-      {
-        path: "/residential/:id",
-        element: <PrivateRoute><ResidentialDetails></ResidentialDetails></PrivateRoute>,
-        loader: () => fetch("/residential.json"),
-      },
+      },      
       {
         path: "/my-list",
         element: <PrivateRoute><MyList></MyList></PrivateRoute>,

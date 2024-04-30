@@ -3,6 +3,8 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import avater from "../assets/avatar.png";
+import { Tooltip } from 'react-tooltip';
+
 //import ThemeControllerBtn from "./ThemeControllerBtn";
 
 const Navbar = () => {
@@ -69,24 +71,24 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li>
+      <li data-tooltip-id="my-tooltip" data-tooltip-content="Home">
         <NavLink to="/"> Home</NavLink>
       </li>
-      <li>
+      <li data-tooltip-id="my-tooltip" data-tooltip-content="All Tourists Spot">
         <NavLink to="/all-tourist-spot"> All Tourists Spot</NavLink>
       </li>
       {/* <li><NavLink to="/login"> Login</NavLink></li>*/}
       {!user && (
-        <li>
+        <li data-tooltip-id="my-tooltip" data-tooltip-content="Register">
           <NavLink to="/register"> Register</NavLink>
         </li>
       )}
       {user && (
         <>
-          <li>
+          <li data-tooltip-id="my-tooltip" data-tooltip-content="Add Tourists Spot">
             <NavLink to="/add-tourists-spot">Add Tourists Spot</NavLink>
           </li>
-          <li>
+          <li data-tooltip-id="my-tooltip" data-tooltip-content="My List">
             <NavLink to="/my-list">My List</NavLink>
           </li>
           
@@ -228,6 +230,7 @@ const Navbar = () => {
         )}
       </div>
       <Toaster />
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };
