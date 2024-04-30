@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 import Residential from "./Residential";
 import { Fade } from "react-awesome-reveal";
 
 const Residentials = () => {
-  const [residentials, setResidentials] = useState([]);
+  //const [residentials, setResidentials] = useState([]);
 
   // useEffect(() => {
   //   fetch("/residential.json")
