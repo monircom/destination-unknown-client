@@ -52,7 +52,7 @@ const MyList = () => {
   }, [user]);
 
   return (
-    <div className="pt-10">
+    <div className="pt-10 mx-auto">
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

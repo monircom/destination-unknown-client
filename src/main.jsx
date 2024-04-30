@@ -20,6 +20,7 @@ import AddTouristsSpot from './components/AddTouristsSpot';
 import AllTouristSpots from './components/AllTouristSpots';
 import MyList from './components/MyList';
 import UpdateSpot from './components/UpdateSpot';
+import CountryWiseSpot from './components/CountryWiseSpot';
 
 
 
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
       {
         path: "/update",
         element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>,
+      },
+      {
+        path: "/country-wise-card/:country",
+        element: <CountryWiseSpot></CountryWiseSpot>,
+       // loader: ({params}) => fetch(`http://localhost:5000/my-list-id/${params.id}`)
       },
       {
         path: "/update-spot/:id",

@@ -17,7 +17,7 @@ const CountryCard = ({ country }) => {
             <hr className="my-6 border-t-2 border-dashed"></hr>     
             <div className="">
               <div>
-              <Link to={`/residential/${country.country_name}`} state={country.country_name}>  <button className="btn btn-primary w-full">View {country.country_name}</button>  </Link>         
+              <Link to={`/country-wise-card/${country.country_name}`} state={country.country_name}>  <button className="btn btn-primary w-full">View {country.country_name}</button>  </Link>         
               </div>           
           </div>
           </div>          
