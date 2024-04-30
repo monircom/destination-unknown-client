@@ -15,12 +15,12 @@ const CountryCard = ({ country }) => {
             <h2 className="card-title font-playfair-display text-2xl">{country.country_name}</h2>
             <p className="">Description: {country.description}</p> 
            
-            <hr className="my-6 border-t-2 border-dashed"></hr>     
+            {/* <hr className="my-6 border-t-2 border-dashed"></hr>     
             <div className="">
-              {/* <div>
+              <div>
               <Link to={`/country-wise-card/${country.country_name}`} state={country.country_name}>  <button className="btn btn-primary w-full">View {country.country_name}</button>  </Link>         
-              </div>            */}
-          </div>
+              </div>           
+          </div> */}
           </div>          
         </div>
         </NavLink>        
