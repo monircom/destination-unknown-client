@@ -10,9 +10,8 @@ const TouristSpotCard = ({spot}) => {
               </figure>
               
               <div className="card-body text-left">
-                <h2 className="card-title font-playfair-display text-2xl">{spot.spotName}</h2>
-                <p className="">Name: {spot.spotName}</p> 
-                <p className="">Cost: {spot.averageCost} $</p> 
+                <h2 className="card-title font-playfair-display text-2xl">{spot.spotName}</h2>                
+                <p className="">Average Cost: {spot.averageCost} $</p> 
                 <p className="">Visitors Per Year: {spot.totalVisitorsPerYear}</p> 
                 <p className="">Travel Time: {spot.travelTime}</p> 
                 <p className="">Seasonality: {spot.seasonality}</p> 
