@@ -17,6 +17,7 @@ import About from "./components/About";
 import ResidentialDetails from "./components/ResidentialDetails";
 import Listings from "./components/Listings";
 import AddTouristsSpot from './components/AddTouristsSpot';
+import AllTouristSpots from './components/AllTouristSpots';
 
 
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/all-tourist-spot",
+        element: <AllTouristSpots></AllTouristSpots> ,
       },
       {
         path: "/listings",
