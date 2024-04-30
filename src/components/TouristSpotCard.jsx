@@ -20,7 +20,7 @@ const TouristSpotCard = ({spot}) => {
                 <hr className="my-6 border-t-2 border-dashed"></hr>     
                 <div className="">
                   <div>
-                  <Link to={`/residential/${spot._id}`} state={spot.spotName}>  <button className="btn btn-primary w-full">View Details</button>  </Link>         
+                  <Link to={`/detail-spot/${spot._id}`} state={spot.spotName}>  <button className="btn btn-primary w-full">View Details</button>  </Link>         
                   </div>           
               </div>
               </div>          
