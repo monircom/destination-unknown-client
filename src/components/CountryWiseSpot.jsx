@@ -6,12 +6,12 @@ import TouristSpotCard from "./TouristSpotCard";
 const CountryWiseSpot = () => {
 
     const { country } = useParams();
-    //http://localhost:5000/country-list/Bangladesh
+    //https://b9a10-destination-unknown-server.vercel.app/country-list/Bangladesh
 
     const [item, setItem] = useState([]);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/country-list/${country}`)
+        fetch(`https://b9a10-destination-unknown-server.vercel.app/country-list/${country}`)
           .then((res) => res.json())
           .then((data) => {
             setItem(data);

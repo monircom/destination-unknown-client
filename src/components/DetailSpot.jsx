@@ -10,7 +10,7 @@ const DetailSpot = () => {
     const [item, setItem] = useState([]);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/detail-spot/${id}`)
+        fetch(`https://b9a10-destination-unknown-server.vercel.app/detail-spot/${id}`)
           .then((res) => res.json())
           .then((data) => {
 

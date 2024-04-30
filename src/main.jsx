@@ -57,17 +57,17 @@ const router = createBrowserRouter([
       {
         path: "/country-wise-card/:country",
         element: <CountryWiseSpot></CountryWiseSpot>,
-       // loader: ({params}) => fetch(`http://localhost:5000/my-list-id/${params.id}`)
+       // loader: ({params}) => fetch(`https://b9a10-destination-unknown-server.vercel.app/my-list-id/${params.id}`)
       },
       {
         path: "/update-spot/:id",
         element: <PrivateRoute><UpdateSpot></UpdateSpot></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/my-list-id/${params.id}`)
+        loader: ({params}) => fetch(`https://b9a10-destination-unknown-server.vercel.app/my-list-id/${params.id}`)
       },
       {
         path: "/detail-spot/:id",
         element: <PrivateRoute><DetailSpot></DetailSpot></PrivateRoute>,
-        //loader: ({params}) => fetch(`http://localhost:5000/my-list-id/${params.id}`)
+        //loader: ({params}) => fetch(`https://b9a10-destination-unknown-server.vercel.app/my-list-id/${params.id}`)
       },
       {
         path: "/add-tourists-spot",

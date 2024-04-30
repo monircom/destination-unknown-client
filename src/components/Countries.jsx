@@ -9,7 +9,8 @@ const Countries = () => {
 
   useEffect(() => {
     //https://b9a10-destination-unknown-server.vercel.app/countries
-    fetch("http://localhost:5000/countries")
+    //https://b9a10-destination-unknown-server.vercel.app/countries
+    fetch("https://b9a10-destination-unknown-server.vercel.app/countries")
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);

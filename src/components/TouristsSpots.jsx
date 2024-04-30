@@ -6,7 +6,7 @@ const TouristsSpots = () => {
 
     useEffect(() => {
         //https://b9a10-destination-unknown-server.vercel.app/countries
-        fetch("http://localhost:5000/tourist-spots")
+        fetch("https://b9a10-destination-unknown-server.vercel.app/tourist-spots")
           .then((res) => res.json())
           .then((data) => setSpots(data));
       }, []);

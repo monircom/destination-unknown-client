@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../Providers/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 const AddTouristsSpot = () => {
     const { user } = useContext(AuthContext);
-
+    const navigate = useNavigate();
     //console.log(user);
 
     //displayName
@@ -29,7 +30,7 @@ const AddTouristsSpot = () => {
         const newTouristSpot = {imageURL, spotName, country, location, description, averageCost, seasonality, travelTime, totalVisitorsPerYear,email,userName};
         console.log(newTouristSpot);
 
-        fetch('http://localhost:5000/tourist-spot',{
+        fetch('https://b9a10-destination-unknown-server.vercel.app/tourist-spot',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,8 +45,12 @@ const AddTouristsSpot = () => {
                     title: 'Success!',
                     text: 'Tourist Spot Added Successfully',
                     icon: 'success',
-                    confirmButtonText: 'Ok'
+                    showConfirmButton: false,
+                    timer: 1500
                   })
+                  setTimeout(function () {
+                    navigate("/my-list");
+                  }, 2500);
             }
         })
 
