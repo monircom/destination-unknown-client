@@ -4,6 +4,7 @@ import SwiperPage from "./SwiperPage";
 //import Residentials from "./Residentials";
 import GetInTouch from "./GetInTouch";
 import Countries from "./Countries";
+import About from "./About";
 
 
 const Home = () => {    
@@ -18,6 +19,8 @@ const Home = () => {
         {/* <Residentials></Residentials> */}
 
         <GetInTouch></GetInTouch>
+
+        <About></About>
             
         </div>
     );

@@ -5,7 +5,7 @@ const GetInTouch = () => {
         data-aos-delay="50"    
         data-aos-easing="ease-in-out"    
         data-aos-once="false">
-            <div className="container max-w-[1170px] lg:my-20 px-4 my-8 mx-auto">
+            <div className="container lg:my-20 px-4 my-8 mx-auto">
                     <div
                         className="flex flex-col justify-center text-center items-center border-dashed border-b-2 border-t-2 border-[#13131833]">
                         <h1 className="mt-8 text-2xl lg:text-4xl font-extrabold">Get In Touch</h1>
