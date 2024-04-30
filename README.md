@@ -21,6 +21,8 @@ npm packages used
 
 B9 A10 Type-01 Requirements
 
+category : Southeast Asia
+
 B9A10-client-side:
 https://github.com/programming-hero-web-course-4/B9A10-client-side-monircom
 
