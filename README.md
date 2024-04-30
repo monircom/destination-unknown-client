@@ -11,8 +11,8 @@ DESTINATION UNKNOWN where user can share their tourist spot with everyone.
 npm packages used
 
 
-React Awesome Reveal
-React-tooltip
+* React Awesome Reveal
+* React-tooltip
 
 
 
