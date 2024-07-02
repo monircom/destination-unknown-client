@@ -24,7 +24,7 @@ Open http://localhost:3000 with your browser to see the result.
 
 
 
-npm packages used
+# npm packages used
 
 * React Awesome Reveal
 * React-tooltip
