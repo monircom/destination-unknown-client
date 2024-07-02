@@ -5,8 +5,8 @@ DESTINATION UNKNOWN where user can share their tourist spot with everyone.
 #Getting Started
 
 First, clone to loacaldrive:
-# npm init
-# npm run dev
+ - npm init
+ - npm run dev
 Open http://localhost:3000 with your browser to see the result.  
 
 # Live Link
