@@ -2,6 +2,19 @@
 
 DESTINATION UNKNOWN where user can share their tourist spot with everyone.
 
+#Getting Started
+
+First, clone to loacaldrive:
+# npm init
+# npm run dev
+Open http://localhost:3000 with your browser to see the result.  
+
+# Live Link
+
+Live Link:
+https://destination-unknown-ed9f8.web.app/
+
+# Features
 - User Can Register
 - User can Add tourist Spot
 - User Edit their tourist Spot
@@ -10,24 +23,7 @@ DESTINATION UNKNOWN where user can share their tourist spot with everyone.
 
 npm packages used
 
-
 * React Awesome Reveal
 * React-tooltip
 
 
-
-
-# Assignment
-
-B9 A10 Type-01 Requirements
-
-category : Southeast Asia
-
-B9A10-client-side:
-https://github.com/programming-hero-web-course-4/B9A10-client-side-monircom
-
-B9A10-server-side:
-https://github.com/programming-hero-web-course-4/b9a10-server-side-monircom
-
-Live Link:
-https://destination-unknown-ed9f8.web.app/
